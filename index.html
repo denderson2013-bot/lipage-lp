@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LipAge — Criopreservação de Gordura Autóloga | Cryopraxis</title>
+  <meta name="description" content="Preserve sua gordura rica em células-tronco hoje para uso futuro em procedimentos estéticos e regenerativos. 24 anos de experiência, 40.000+ amostras. Cryopraxis.">
+  <meta property="og:title" content="LipAge — Sua gordura de hoje vale mais do que a de amanhã">
+  <meta property="og:description" content="Criopreservação autóloga de tecido adiposo pela Cryopraxis. 24 anos, 40.000+ amostras, padrão AABB/ABHH.">
+  <meta property="og:image" content="capa4.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.lipage.com.br">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 17px;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #0f1d3a;
+      background: #ffffff;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ===== NAV ===== */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(15, 29, 58, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 14px 0;
+      transition: box-shadow 0.3s;
+    }
+
+    .nav.scrolled {
+      box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+    }
+
+    .nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      height: 36px;
+      width: auto;
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #25D366;
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 50px;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .nav-cta:hover {
+      background: #1ebe5d;
+      transform: translateY(-1px);
+    }
+
+    .nav-cta svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding-top: 80px;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(10, 20, 50, 0.88) 0%, rgba(15, 29, 58, 0.65) 50%, rgba(26, 58, 107, 0.45) 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      padding: 80px 0;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.9);
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 50px;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.15;
+      margin-bottom: 24px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: #7eb8f7;
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.7;
+      margin-bottom: 40px;
+      max-width: 580px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #25D366;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 1.05rem;
+      font-weight: 700;
+      padding: 18px 36px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35);
+    }
+
+    .btn-primary:hover {
+      background: #1ebe5d;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 28px rgba(37, 211, 102, 0.45);
+    }
+
+    .btn-primary svg {
+      width: 22px;
+      height: 22px;
+      fill: currentColor;
+    }
+
+    /* ===== SECTIONS ===== */
+    section {
+      padding: 100px 0;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #1a3a6b;
+      background: rgba(26, 58, 107, 0.07);
+      padding: 6px 16px;
+      border-radius: 50px;
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 800;
+      color: #1a3a6b;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+    }
+
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: #4a5568;
+      max-width: 640px;
+      line-height: 1.7;
+    }
+
+    /* ===== PROBLEMA ===== */
+    .problema {
+      background: #f8f9fc;
+    }
+
+    .problema-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+    .problema-text p {
+      margin-bottom: 20px;
+      color: #2d3748;
+      font-size: 1rem;
+    }
+
+    .problema-text strong {
+      color: #0f1d3a;
+    }
+
+    .problema-highlight {
+      background: linear-gradient(135deg, #0f1d3a, #1a3a6b);
+      color: #ffffff;
+      padding: 36px;
+      border-radius: 16px;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    .problema-highlight .big-stat {
+      font-size: 2.8rem;
+      font-weight: 800;
+      display: block;
+      margin-bottom: 8px;
+      color: #7eb8f7;
+    }
+
+    .problema-highlight p {
+      margin-bottom: 16px;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .problema-highlight p:last-child {
+      margin-bottom: 0;
+    }
+
+    .waste-label {
+      display: inline-block;
+      background: rgba(255, 100, 100, 0.2);
+      color: #ff8a8a;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 4px 14px;
+      border-radius: 50px;
+      margin-bottom: 16px;
+    }
+
+    /* ===== SOLUCAO ===== */
+    .solucao-intro {
+      max-width: 700px;
+      margin-bottom: 50px;
+    }
+
+    .solucao-intro p {
+      color: #4a5568;
+      font-size: 1rem;
+      margin-bottom: 16px;
+    }
+
+    .etapas {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .etapa {
+      background: #f8f9fc;
+      border-radius: 16px;
+      padding: 40px;
+      position: relative;
+      border: 1px solid #e8ecf4;
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+
+    .etapa:hover {
+      box-shadow: 0 8px 32px rgba(15, 29, 58, 0.08);
+      transform: translateY(-4px);
+    }
+
+    .etapa-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #1a3a6b, #2a5298);
+      color: #fff;
+      font-weight: 800;
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .etapa h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #1a3a6b;
+      margin-bottom: 14px;
+    }
+
+    .etapa p {
+      color: #4a5568;
+      font-size: 0.95rem;
+    }
+
+    .solucao-benefits {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 50px;
+    }
+
+    .benefit {
+      text-align: center;
+      padding: 28px 20px;
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid #e8ecf4;
+    }
+
+    .benefit-icon {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .benefit strong {
+      display: block;
+      font-size: 0.9rem;
+      color: #1a3a6b;
+      margin-bottom: 4px;
+    }
+
+    .benefit span {
+      font-size: 0.82rem;
+      color: #718096;
+    }
+
+    /* ===== NUMEROS ===== */
+    .numeros {
+      background: #f8f9fc;
+    }
+
+    .numeros-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin: 50px 0;
+    }
+
+    .stat-card {
+      background: #fff;
+      padding: 32px;
+      border-radius: 16px;
+      text-align: center;
+      border: 1px solid #e8ecf4;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.03);
+    }
+
+    .stat-card .number {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: #1a3a6b;
+      display: block;
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+
+    .stat-card .label {
+      font-size: 0.85rem;
+      color: #718096;
+      line-height: 1.5;
+    }
+
+    .comparativo {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid #e8ecf4;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    }
+
+    .comparativo-header {
+      background: linear-gradient(135deg, #0f1d3a, #1a3a6b);
+      color: #fff;
+      padding: 24px 36px;
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    .comparativo-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .comparativo-table th,
+    .comparativo-table td {
+      padding: 18px 36px;
+      text-align: left;
+      font-size: 0.95rem;
+      border-bottom: 1px solid #f0f2f7;
+    }
+
+    .comparativo-table thead th {
+      background: #f8f9fc;
+      font-weight: 700;
+      color: #1a3a6b;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .comparativo-table tbody td {
+      color: #2d3748;
+    }
+
+    .comparativo-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .tag-ha {
+      display: inline-block;
+      background: #fef3c7;
+      color: #92400e;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 50px;
+    }
+
+    .tag-lipage {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 50px;
+    }
+
+    .comparativo-footer {
+      padding: 20px 36px;
+      background: #f0fdf4;
+      color: #166534;
+      font-size: 0.9rem;
+      font-weight: 500;
+      border-top: 2px solid #bbf7d0;
+    }
+
+    /* ===== CREDENCIAL ===== */
+    .credencial-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+    .credencial-list {
+      list-style: none;
+    }
+
+    .credencial-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 18px 0;
+      border-bottom: 1px solid #e8ecf4;
+    }
+
+    .credencial-list li:last-child {
+      border-bottom: none;
+    }
+
+    .cred-icon {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #1a3a6b, #2a5298);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.1rem;
+    }
+
+    .cred-text strong {
+      display: block;
+      font-size: 0.95rem;
+      color: #0f1d3a;
+      margin-bottom: 2px;
+    }
+
+    .cred-text span {
+      font-size: 0.85rem;
+      color: #718096;
+    }
+
+    .credencial-card {
+      background: linear-gradient(135deg, #0f1d3a, #1a3a6b);
+      border-radius: 20px;
+      padding: 48px;
+      color: #fff;
+      text-align: center;
+    }
+
+    .credencial-card .big-number {
+      font-size: 4.5rem;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 8px;
+      background: linear-gradient(135deg, #7eb8f7, #a8d8ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .credencial-card .big-label {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 32px;
+    }
+
+    .credencial-card .sub-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .credencial-card .sub-stat .num {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #7eb8f7;
+      display: block;
+    }
+
+    .credencial-card .sub-stat .txt {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.7);
+    }
+
+    /* ===== VIDEO ===== */
+    .video-section {
+      background: #f8f9fc;
+      text-align: center;
+    }
+
+    .video-wrapper {
+      max-width: 800px;
+      margin: 40px auto 0;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.1);
+      aspect-ratio: 16 / 9;
+    }
+
+    .video-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* ===== GALERIA ===== */
+    .galeria-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 50px;
+    }
+
+    .galeria-item {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .galeria-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    }
+
+    .galeria-item img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+
+    .galeria-caption {
+      padding: 16px 20px;
+      background: #fff;
+      font-size: 0.85rem;
+      color: #4a5568;
+      font-weight: 500;
+    }
+
+    /* ===== PARA QUEM ===== */
+    .para-quem {
+      background: #f8f9fc;
+    }
+
+    .perfis {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 50px;
+    }
+
+    .perfil {
+      background: #fff;
+      padding: 32px;
+      border-radius: 16px;
+      border: 1px solid #e8ecf4;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+
+    .perfil:hover {
+      box-shadow: 0 8px 32px rgba(15, 29, 58, 0.06);
+      transform: translateY(-2px);
+    }
+
+    .perfil-icon {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: rgba(26, 58, 107, 0.07);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+    }
+
+    .perfil p {
+      color: #2d3748;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .perfil strong {
+      color: #1a3a6b;
+    }
+
+    /* ===== CTA FINAL ===== */
+    .cta-final {
+      background: linear-gradient(135deg, #0f1d3a 0%, #1a3a6b 100%);
+      text-align: center;
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-final::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -20%;
+      width: 140%;
+      height: 200%;
+      background: radial-gradient(ellipse, rgba(126, 184, 247, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta-final .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .cta-final .section-title {
+      color: #ffffff;
+      max-width: 700px;
+      margin: 0 auto 16px;
+    }
+
+    .cta-final .section-subtitle {
+      color: rgba(255,255,255,0.75);
+      margin: 0 auto 44px;
+      max-width: 600px;
+    }
+
+    .cta-final .btn-primary {
+      font-size: 1.15rem;
+      padding: 20px 44px;
+    }
+
+    .cta-phones {
+      margin-top: 36px;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .cta-phones a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+    }
+
+    .cta-phones a:hover {
+      color: #ffffff;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #080e1e;
+      color: rgba(255,255,255,0.5);
+      padding: 48px 0;
+      text-align: center;
+    }
+
+    .footer-logo {
+      height: 32px;
+      margin: 0 auto 24px;
+      opacity: 0.6;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: #ffffff;
+    }
+
+    .footer-disclaimer {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 0.75rem;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.35);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 24px;
+    }
+
+    /* ===== FADE-IN ANIMATION ===== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      html { font-size: 16px; }
+
+      section { padding: 72px 0; }
+
+      .hero-content { padding: 50px 0; }
+
+      .problema-grid,
+      .etapas,
+      .credencial-grid,
+      .galeria-grid,
+      .perfis {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .numeros-stats,
+      .solucao-benefits {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .comparativo-table th,
+      .comparativo-table td {
+        padding: 14px 18px;
+        font-size: 0.85rem;
+      }
+
+      .comparativo-header {
+        padding: 18px;
+        font-size: 1rem;
+      }
+
+      .comparativo-footer {
+        padding: 16px 18px;
+      }
+
+      .credencial-card {
+        padding: 36px 24px;
+      }
+
+      .credencial-card .big-number {
+        font-size: 3.2rem;
+      }
+
+      .galeria-item img {
+        height: 220px;
+      }
+
+      .cta-final { padding: 72px 0; }
+
+      .nav-cta span {
+        display: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 0 18px; }
+
+      .etapa { padding: 28px; }
+
+      .credencial-card .sub-stats {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="container">
+      <img src="logo-white@2x.png" alt="LipAge" class="nav-logo">
+      <a href="https://wa.me/552121417777" class="nav-cta" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span>Quero saber mais</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="capa4.jpg" alt="Células adiposas em render 3D" loading="eager">
+    </div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">Criopreservação Autóloga de Tecido Adiposo</div>
+        <h1>Sua gordura de hoje vale mais do que a de amanhã. <em>A ciência provou.</em></h1>
+        <p class="hero-sub">A Cryopraxis, com 24 anos e 40.000 amostras armazenadas, criou o primeiro serviço de criopreservação de gordura autóloga do Brasil. Chama-se LipAge. E pode mudar a forma como você pensa sobre envelhecimento.</p>
+        <a href="https://wa.me/552121417777" class="btn-primary" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Quero saber mais
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEMA -->
+  <section class="problema" id="problema">
+    <div class="container">
+      <div class="fade-in">
+        <span class="section-label">O problema</span>
+        <h2 class="section-title">Existe um fato que a maioria das pessoas desconhece.</h2>
+      </div>
+      <div class="problema-grid">
+        <div class="problema-text fade-in">
+          <p>Toda vez que alguém faz uma lipoaspiração no Brasil — e são mais de 2 milhões por ano — um material biológico extraordinário é descartado.</p>
+          <p><strong>Gordura.</strong> Rica em células-tronco mesenquimais. Capaz de regenerar tecidos, preencher volume facial com naturalidade absoluta, corrigir cicatrizes, reconstruir o que o tempo leva embora.</p>
+          <p>No lixo.</p>
+          <p>Um estudo publicado no <em>Aesthetic Plastic Surgery</em> em 2023 demonstrou algo que deveria preocupar qualquer pessoa que se importa com a própria aparência: <strong>a viabilidade das suas células-tronco diminui com a idade.</strong></p>
+          <p>A gordura que você tem aos 30 é biologicamente superior à que terá aos 50. Não é opinião. É dado científico, publicado, revisado por pares.</p>
+        </div>
+        <div class="problema-highlight fade-in">
+          <span class="waste-label">Material descartado</span>
+          <span class="big-stat">2M+</span>
+          <p>lipoaspirações por ano no Brasil com gordura rica em células-tronco descartada.</p>
+          <p><strong>Cada ano que passa, sua matéria-prima biológica perde valor.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUCAO -->
+  <section class="solucao" id="solucao">
+    <div class="container">
+      <div class="fade-in">
+        <span class="section-label">A solução</span>
+        <h2 class="section-title">O LipAge existe para resolver isso.</h2>
+      </div>
+      <div class="solucao-intro fade-in">
+        <p>Desenvolvido pela Cryopraxis — a mesma empresa que há 24 anos preserva células-tronco de cordão umbilical com padrão internacional AABB — o LipAge processa e criopreserva o tecido adiposo retirado na sua lipoaspiração. Para uso futuro. Quando você quiser. Quantas vezes precisar.</p>
+        <p>O material é 100% seu. Do seu corpo. Sem substância sintética. Sem risco de rejeição imunológica. Sem a necessidade de uma nova cirurgia a cada vez que quiser um retoque.</p>
+      </div>
+      <div class="etapas">
+        <div class="etapa fade-in">
+          <div class="etapa-num">1</div>
+          <h3>Coleta e processamento</h3>
+          <p>Durante sua lipoaspiração (que você já faria de qualquer forma), o tecido adiposo é coletado pelo kit proprietário da Cryopraxis. O material é transportado com segurança e processado nos laboratórios da empresa, preservando as células-tronco mesenquimais intactas.</p>
+        </div>
+        <div class="etapa fade-in">
+          <div class="etapa-num">2</div>
+          <h3>Armazenamento e uso futuro</h3>
+          <p>Seu tecido fica criopreservado em condições controladas, disponível para quando você precisar. Preenchimento facial, lipoescultura, correção de cicatrizes, reconstrução tecidual. A decisão de quando e como usar é sempre sua, em conjunto com seu médico.</p>
+        </div>
+      </div>
+      <div class="solucao-benefits fade-in">
+        <div class="benefit">
+          <span class="benefit-icon" aria-hidden="true">&#x1f9ec;</span>
+          <strong>100% autólogo</strong>
+          <span>Material do seu próprio corpo</span>
+        </div>
+        <div class="benefit">
+          <span class="benefit-icon" aria-hidden="true">&#x1f6e1;&#xfe0f;</span>
+          <strong>Zero rejeição</strong>
+          <span>Sem substâncias sintéticas</span>
+        </div>
+        <div class="benefit">
+          <span class="benefit-icon" aria-hidden="true">&#x2744;&#xfe0f;</span>
+          <strong>Uso quando quiser</strong>
+          <span>Sem nova cirurgia</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NUMEROS -->
+  <section class="numeros" id="numeros">
+    <div class="container">
+      <div class="fade-in">
+        <span class="section-label">Números do mercado</span>
+        <h2 class="section-title">O futuro da estética é biológico, não sintético.</h2>
+        <p class="section-subtitle">O Brasil é o país que mais realiza cirurgias plásticas no mundo. A tendência é clara.</p>
+      </div>
+      <div class="numeros-stats fade-in">
+        <div class="stat-card">
+          <span class="number">3,3M</span>
+          <span class="label">procedimentos estéticos por ano no Brasil</span>
+        </div>
+        <div class="stat-card">
+          <span class="number">18%</span>
+          <span class="label">crescimento anual do mercado de medicina regenerativa</span>
+        </div>
+        <div class="stat-card">
+          <span class="number">US$ 235bi</span>
+          <span class="label">projeção do mercado global até 2035</span>
+        </div>
+      </div>
+      <div class="comparativo fade-in">
+        <div class="comparativo-header">Ácido hialurônico vs. LipAge — Comparativo</div>
+        <table class="comparativo-table">
+          <thead>
+            <tr>
+              <th>Critério</th>
+              <th><span class="tag-ha">Ácido Hialurônico</span></th>
+              <th><span class="tag-lipage">LipAge</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Origem</td>
+              <td>Sintético</td>
+              <td>Autólogo (seu corpo)</td>
+            </tr>
+            <tr>
+              <td>Duração</td>
+              <td>6–12 meses</td>
+              <td>Uso sob demanda, sem validade</td>
+            </tr>
+            <tr>
+              <td>Rejeição</td>
+              <td>Possível</td>
+              <td>Zero (material próprio)</td>
+            </tr>
+            <tr>
+              <td>Reaplicação</td>
+              <td>Nova sessão a cada 6 meses</td>
+              <td>Sem nova cirurgia</td>
+            </tr>
+            <tr>
+              <td>Custo 25 anos (35→60)</td>
+              <td>R$ 125 mil – R$ 250 mil</td>
+              <td>Fração do valor</td>
+            </tr>
+            <tr>
+              <td>Naturalidade</td>
+              <td>Boa</td>
+              <td>Absoluta (tecido vivo)</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="comparativo-footer">
+          Com o LipAge, o investimento é uma fração do custo do ácido hialurônico. E o material é permanentemente seu.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENCIAL -->
+  <section class="credencial" id="credencial">
+    <div class="container">
+      <div class="fade-in">
+        <span class="section-label">Credenciais</span>
+        <h2 class="section-title">A Cryopraxis não é uma startup.</h2>
+        <p class="section-subtitle">Quando você preserva cordão umbilical de um filho, confia numa empresa séria para guardar algo insubstituível. O LipAge é a mesma lógica. A mesma infraestrutura. O mesmo rigor. Aplicado a você.</p>
+      </div>
+      <div class="credencial-grid">
+        <ul class="credencial-list fade-in">
+          <li>
+            <div class="cred-icon" aria-hidden="true">&#x1f3e5;</div>
+            <div class="cred-text">
+              <strong>24 anos de operação ininterrupta</strong>
+              <span>Referência nacional em criopreservação biológica</span>
+            </div>
+          </li>
+          <li>
+            <div class="cred-icon" aria-hidden="true">&#x1f9ea;</div>
+            <div class="cred-text">
+              <strong>40.000+ amostras armazenadas</strong>
+              <span>Com segurança e rastreabilidade total</span>
+            </div>
+          </li>
+          <li>
+            <div class="cred-icon" aria-hidden="true">&#x2705;</div>
+            <div class="cred-text">
+              <strong>Acreditação AABB e ABHH</strong>
+              <span>Padrão exigido dos melhores biobancos do mundo</span>
+            </div>
+          </li>
+          <li>
+            <div class="cred-icon" aria-hidden="true">&#x1f50c;</div>
+            <div class="cred-text">
+              <strong>Monitoramento 24/7</strong>
+              <span>Redundância de sistemas criogênicos</span>
+            </div>
+          </li>
+        </ul>
+        <div class="credencial-card fade-in">
+          <div class="big-number">24</div>
+          <div class="big-label">anos de excelência</div>
+          <div class="sub-stats">
+            <div class="sub-stat">
+              <span class="num">40k+</span>
+              <span class="txt">amostras preservadas</span>
+            </div>
+            <div class="sub-stat">
+              <span class="num">24/7</span>
+              <span class="txt">monitoramento contínuo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <section class="video-section" id="video">
+    <div class="container">
+      <div class="fade-in">
+        <span class="section-label">Veja em ação</span>
+        <h2 class="section-title">Conheça o LipAge</h2>
+      </div>
+      <div class="video-wrapper fade-in">
+        <iframe
+          src="https://www.youtube.com/embed/q34spCrmAbc"
+          title="Conheça o LipAge — Criopreservação de Gordura Autóloga"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA / PROVA SOCIAL -->
+  <section class="galeria" id="galeria">
+    <div class="container">
+      <div class="fade-in">
+        <span class="section-label">Presença científica</span>
+        <h2 class="section-title">LipAge no Congresso Regenera Brasil</h2>
+        <p class="section-subtitle">Reconhecimento da comunidade médica e científica em eventos de referência.</p>
+      </div>
+      <div class="galeria-grid">
+        <div class="galeria-item fade-in">
+          <img src="congresso-palestrante.jpg" alt="Palestrante no Congresso Regenera Brasil" loading="lazy">
+          <div class="galeria-caption">Apresentação científica no Congresso Regenera Brasil</div>
+        </div>
+        <div class="galeria-item fade-in">
+          <img src="stand-lipage.jpg" alt="Stand do LipAge em feira médica" loading="lazy">
+          <div class="galeria-caption">Stand LipAge — exposição para profissionais de saúde</div>
+        </div>
+        <div class="galeria-item fade-in">
+          <img src="congresso-plateia.jpg" alt="Plateia do Congresso Regenera Brasil" loading="lazy">
+          <div class="galeria-caption">Plateia lotada no congresso de medicina regenerativa</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARA QUEM -->
+  <section class="para-quem" id="para-quem">
+    <div class="container">
+      <div class="fade-in">
+        <span class="section-label">Para quem é</span>
+        <h2 class="section-title">O LipAge é para você?</h2>
+      </div>
+      <div class="perfis">
+        <div class="perfil fade-in">
+          <div class="perfil-icon" aria-hidden="true">&#x1fa7a;</div>
+          <p>Para quem <strong>já vai fazer uma lipoaspiração</strong> e não quer desperdiçar o material biológico mais valioso que tem.</p>
+        </div>
+        <div class="perfil fade-in">
+          <div class="perfil-icon" aria-hidden="true">&#x1f33f;</div>
+          <p>Para quem prefere <strong>resultados naturais</strong> a substâncias sintéticas.</p>
+        </div>
+        <div class="perfil fade-in">
+          <div class="perfil-icon" aria-hidden="true">&#x1f4c8;</div>
+          <p>Para quem pensa em <strong>longo prazo</strong> e entende que a prevenção é mais inteligente que a correção.</p>
+        </div>
+        <div class="perfil fade-in">
+          <div class="perfil-icon" aria-hidden="true">&#x1f52c;</div>
+          <p>Para quem busca o que há de <strong>mais avançado em medicina estética e regenerativa</strong>, com respaldo científico e institucional.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-final" id="contato">
+    <div class="container">
+      <div class="fade-in">
+        <h2 class="section-title">Sua gordura de hoje é a mais jovem que você terá pelo resto da vida.</h2>
+        <p class="section-subtitle">Converse com seu médico sobre o LipAge. Ou entre em contato diretamente com a Cryopraxis para saber como preservar o que é seu.</p>
+        <a href="https://wa.me/552121417777" class="btn-primary" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Quero saber mais
+        </a>
+        <div class="cta-phones">
+          <a href="tel:+551151784000">(11) 5178-4000</a> &nbsp;|&nbsp;
+          <a href="tel:+552121417777">(21) 2141-7777</a> &nbsp;|&nbsp;
+          <a href="tel:08006067777">0800 606 7777</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <img src="logo-white@2x.png" alt="LipAge" class="footer-logo">
+      <div class="footer-links">
+        <a href="https://www.lipage.com.br" target="_blank" rel="noopener">www.lipage.com.br</a>
+        <a href="https://instagram.com/lipageoficial" target="_blank" rel="noopener">@lipageoficial</a>
+        <a href="https://wa.me/552121417777" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+      <p class="footer-disclaimer">
+        LipAge é um serviço de criopreservação autóloga. O uso clínico do material preservado é de responsabilidade do médico assistente, conforme normas vigentes. Este material não constitui promessa de resultado terapêutico.
+      </p>
+    </div>
+  </footer>
+
+  <!-- SCROLL FADE-IN -->
+  <script>
+    (function() {
+      var els = document.querySelectorAll('.fade-in');
+      if (!('IntersectionObserver' in window)) {
+        for (var i = 0; i < els.length; i++) els[i].classList.add('visible');
+        return;
+      }
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+      els.forEach(function(el) { observer.observe(el); });
+    })();
+
+    // Nav shadow on scroll
+    var nav = document.getElementById('nav');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 40) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    }, { passive: true });
+  </script>
+
+</body>
+</html>
